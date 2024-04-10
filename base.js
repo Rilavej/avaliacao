@@ -1,4 +1,4 @@
-[
+const lista = [
     {
     "id": 1,
     "descricao": "Camiseta",
@@ -23,4 +23,6 @@
     "preco": 99.99,
     "cores": ["preto", "marrom"]
     }
-   ]
+]
+
+   module.exports = lista

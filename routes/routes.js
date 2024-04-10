@@ -1,9 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const controller = require("../controllers/controller.js")
 
-router.get("/", (req, res) => {
-    res.status(200).send("Servidor OK")
-})
+router.get("/", controller.get_all)
 
-
-module.export = router
+module.exports = router
