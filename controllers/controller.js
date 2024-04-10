@@ -22,6 +22,7 @@ controller.post = (req, res) => {
     let objeto = req.body
     objeto.id = lastId + 1
     lista.push(objeto)
+    lastId ++
     res.status(200).send(`${objeto} \ncadastrado com sucesso`)
 
 }
