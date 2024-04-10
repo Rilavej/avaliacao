@@ -25,4 +25,4 @@ const lista = [
     }
 ]
 
-   module.exports = lista
+module.exports = lista
