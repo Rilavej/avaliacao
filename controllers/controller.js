@@ -25,5 +25,20 @@ controller.post = (req, res) => {
     res.status(200).send(`${objeto} \ncadastrado com sucesso`)
 
 }
+controller.update = (req, res) => {
+    let status 
+    for (let i = 0; i < lista.length ; i++) {
+        if (lista[i].id == req.params.id) {
+            let id = lista[i].id
+            lista[i] = req.body
+            lista[i].id = id
+            status = true
+            res.status(200).send("<h1>Base atualizada!</h1>")
+        }
+    }
+    if (status != true) {
+        res.status(404).send("id não encontrado")
+    }
+}
 
 module.exports = controller
