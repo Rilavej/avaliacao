@@ -40,5 +40,20 @@ controller.update = (req, res) => {
         res.status(404).send("id não encontrado")
     }
 }
+controller.delete = (req, res) => {
+    let status
+    for (let i = 0; i < lista.length ; i++) {
+        if (lista[i].id == req.params.id) {
+            lista.splice(i, 1)
+            res.status(200).send("<h1>Item deletado!</h1>")
+            status = true
+        }
+    }
+    if (status != true) {
+        res.status(404).send("id não encontrado")
+    }
+}
+
+
 
 module.exports = controller
