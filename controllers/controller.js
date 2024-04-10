@@ -1,4 +1,5 @@
 const lista = require("../base.js")
+var lastId = lista.length
 
 const controller = {}
 
@@ -16,6 +17,13 @@ controller.getById = (req, res) => {
     if (status != true) {
         res.status(404).send(`O id ${req.params.id} não consta na base`)
     }
+}
+controller.post = (req, res) => {
+    let objeto = req.body
+    objeto.id = lastId + 1
+    lista.push(objeto)
+    res.status(200).send(`${objeto} \ncadastrado com sucesso`)
+
 }
 
 module.exports = controller

@@ -3,7 +3,7 @@ const app = express()
 
 const router = require("./routes/routes.js")
 
-//app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(router)
 

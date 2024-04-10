@@ -4,5 +4,6 @@ const controller = require("../controllers/controller.js")
 
 router.get("/", controller.getAll)
 router.get("/:id", controller.getById)
+router.post("/", controller.post)
 
 module.exports = router
